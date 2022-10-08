@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/grid.css">
+    <link rel="stylesheet" href="./assets/main.css">
+    <!-- Clone : https://24hphimmoi.net/ -->
+    <!-- API : https://ophim.cc/api-document -->
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="nav-left">
+                <i class="fa-sharp fa-solid fa-bars nav-left__icon"></i>
+                <div class="nav-left__logo">
+                    <a href="#" class="nav-left__logo-link">Web Xem Phim</a>
+                </div>
+                <div class="nav-left__search">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass nav-left__search-icon"></i>
+                    <input type="text" placeholder="Tìm kiếm ..." class="nav-left__search-input">
+                </div>
+            </div>
+            
+            <div class="nav-right">
+                <i class="fa-solid fa-bookmark nav-right__icon"></i>
+                <i class="fa-solid fa-envelope nav-right__icon"></i>
+                <i class="fa-solid fa-bell nav-right__icon"></i>
+                <div class="nav-right__login-btn">Login</div>
+            </div>
+
+            <div class="nav-bar__menu">
+                <div class="nav-bar__container">
+                    <a href="#" class="nav-bar__menu-direct-link"><i class="nav-bar__menu-direct-icon fa-sharp fa-solid fa-house"></i>Trang chủ</a>
+                </div>
+                <div class="nav-bar__container">
+                    <a href="#" class="nav-bar__menu-direct-link"><i class="nav-bar__menu-direct-icon fa-solid fa-bookmark"></i>Phim đã lưu</a>
+                </div>
+                <p class="nav-bar__menu-filter">Menu</p>
+                <div class="nav-bar__container">
+                    <ul class="nav-bar__menu-list">
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Thể loại</a>
+                            <i class="nav-bar__menu-item-icon fa-solid fa-chevron-right"></i>
+                            <ul class="nav-bar__subMenu">
+                                <li class="nav-bar__subMenu-item"><a href="#" class="nav-bar__subMenu-item-link">Hành động</a></li>
+                                <li class="nav-bar__subMenu-item"><a href="#" class="nav-bar__subMenu-item-link">Tình Cảm</a></li>
+                                <li class="nav-bar__subMenu-item"><a href="#" class="nav-bar__subMenu-item-link">Hài Hước</a></li>
+                                <li class="nav-bar__subMenu-item"><a href="#" class="nav-bar__subMenu-item-link">Cổ Trang</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Quốc gia</a>
+                            <i class="nav-bar__menu-item-icon fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Năm phát hành</a>
+                            <i class="nav-bar__menu-item-icon fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Phim bộ</a>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Phim lẻ</a>
+                        </li>
+                        <li class="nav-bar__menu-item">
+                            <a href="#" class="nav-bar__menu-item-link">Phim hoạt hình</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-9 m-12 s-12 pdr28">
+                    <div class="slider">
+                        <div class="slider-background">
+                            <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fwebtoon-doi-toi-poster.jpg&w=684&q=100" alt="Image">
+                            <div class="slider-background__info">
+                                <h3 class="slider-background__info-heading">Webtoon đời tôi</h3>
+                                <p class="slider-background__info-name">Today's Webtoon</p>
+                                <div class="slider-background__info-box">
+                                    <div class="slider-background__info-box-progress contain-box contain-box--red">Hoàn tất 20/20</div>
+                                    <div class="slider-background__info-box-qualify contain-box contain-box--white">HD</div>
+                                    <div class="slider-background__info-box-year contain-box contain-box--green">2020</div>
+                                    <div class="slider-background__info-box-nation contain-box contain-box--blue">Hàn Quốc</div>
+                                </div>
+                                <a href="#" class="slider-background__view">
+                                    <button class="slider-background__button">Xem ngay</button> 
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slider-background__overlays"></div>
+                        <ul class="slider-pagination">
+                            <!-- <li class="slider-pagination__presentation active"><i class="fa-sharp fa-solid fa-circle"></i></i></li>
+                            <li class="slider-pagination__presentation"><i class="fa-sharp fa-solid fa-circle"></i></i></li>
+                            <li class="slider-pagination__presentation"><i class="fa-sharp fa-solid fa-circle"></i></i></li>
+                            <li class="slider-pagination__presentation"><i class="fa-sharp fa-solid fa-circle"></i></i></li>
+                            <li class="slider-pagination__presentation"><i class="fa-sharp fa-solid fa-circle"></i></i></li> -->
+                        </ul>
+                    </div>
+                    <div class="film-list">
+                        <div class="film-list__heading">
+                            <h2 class="film-list__tagname">Phim mới cập nhật</h2>
+                            <a href="#" class="film-list__tagname-more">Xem thêm <i class="fa-solid fa-chevron-right film-list__tagname-more-icon"></i></a>
+                        </div>
+                        <div class="row">
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="col l-3 m-4 s-6 film-list__item">
+                                <div class="film-list__item-qualify">HD</div>
+                                <div class="film-list__item-img">
+                                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlgxOQirX_eN8jxDLzWENYWyg0trZYYbkf0veuZQGKtJs61IyE" alt="Thanh tra mau muc">
+                                    <div class="film-list__item-playbtn">
+                                        <i class="fa-solid fa-circle-play"></i>
+                                    </div>
+                                </div>
+                                <div class="film-list__item-text">
+                                    <h3 class="film-list__item-name">Thanh tra mẫu mực</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-3 m-0 s-0">
+                    <div class="slide-bar__selection">
+                        <div class="slide-bar__heading">
+                            <h3 class="slide-bar__heading-title">Phim đang hot</h3>
+                            <i class="fa-sharp fa-solid fa-arrow-right slide-bar__heading-icon"></i>
+                        </div>
+                        <div class="slide-bar__menu">          
+                                <ul class="slide-bar__menu-list">
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://kpopnews.atsit.in/vi/wp-content/uploads/2021/10/minamdang-case-note-cast-summary.jpg" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Tiệm cà phê mỹ nam</p>
+                                                <p class="slide-bar__menu-item-name-eng">Cafe Mynamdang</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fxac-suat-tinh-yeu-12-poster.jpg&w=192&q=75" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Xác xuất tình yêu 12%</p>
+                                                <p class="slide-bar__menu-item-name-eng">My only 12%</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fwebtoon-doi-toi-poster.jpg&w=192&q=75" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Webtoon</p>
+                                                <p class="slide-bar__menu-item-name-eng">Today Webtoon</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fone-piece-thumb.jpg&w=192&q=75" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Đảo hải tặc</p>
+                                                <p class="slide-bar__menu-item-name-eng">One piece</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fde-che-phap-luat-thumb.jpg&w=192&q=75" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Đối tác hoàn hảo</p>
+                                                <p class="slide-bar__menu-item-name-eng">No name</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="slide-bar__menu-item">
+                                        <a href="#" class="slide-bar__menu-item-link">
+                                            <div class="slide-bar__menu-item-thumbnail">
+                                                <img src="https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fone-piece-thumb.jpg&w=192&q=75" alt="Ảnh mô tả" class="slide-bar__menu-item-img">
+                                                <div class="slide-bar__menu-item-part">Tập 1</div>
+                                            </div>
+                                            <div class="slide-bar__menu-item-description">
+                                                <p class="slide-bar__menu-item-name">Đảo hải tặc</p>
+                                                <p class="slide-bar__menu-item-name-eng">One piece</p>
+                                                <p class="slide-bar__menu-item-year">2022</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-2 m-3 s-12">
+                    <div class="footer__info">
+                        <p class="footer__info-copyright">Bản quyền và nội dung</p>
+                        <p class="footer__info-contact">Liên hệ</p>
+                        <ul class="footer__info-contact-list">
+                            <li class="footer__info-contact-item"><i class="footer__info-contact-icon fa-sharp fa-solid fa-envelope"></i>Email: viesub@outlook.com</li>
+                            <li class="footer__info-contact-item"><i class="footer__info-contact-icon fa-brands fa-telegram"></i>Telegram: @viesub</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col l-10 m-9 s-12">
+                    <div class="footer__description">                 
+                        <p>Xem phim online miễn phí chất lượng cao với phụ đề tiếng việt - thuyết minh - lồng tiếng. 24hPhimMoi.net có nhiều thể loại phim phong phú, đặc sắc, nhiều bộ phim hay nhất - mới nhất.</p>
+                        <p>Website 24hphimmoi.net với giao diện trực quan, thuận tiện, tốc độ tải nhanh, thường xuyên cập nhật các bộ phim mới hứa hẹn sẽ đem lại những trải nghiệm tốt cho người dùng.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>
