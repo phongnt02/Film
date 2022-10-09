@@ -248,3 +248,90 @@ const menuShow = {
     }
 }
 menuShow.start();
+
+
+// Login / Register Btn DOM Element
+const loginBtn = $('.nav-right__login-btn')
+const registerBtn = $('.nav-right__register-btn')
+const modal = $('.modal')
+const modalOverlays = $('.modal-overlays')
+const loginForm = $('.login-form')
+const registerForm = $('.register-form')
+
+const form = {
+    isLoginForm : false,
+    isRegisterForm : false,
+    isModal :false,
+    useFunctionValidator : function () {
+        Validator({
+            form:'.register-form',
+            formGroup:'.form-item',
+            rules : [
+                Validator.isRequired('input[name="fullname"]','Vui lòng nhập tên đầy đủ'),
+                Validator.isRequired('input[name="email"]'),
+                Validator.isRequired('input[name="password"]','Vui lòng nhập mật khẩu'),
+                Validator.isLength('input[name="password"]',6),
+                Validator.isRequired('input[name="passwordconfirm"]','Vui lòng nhập mật khẩu'),
+                Validator.isConfirm('input[name="passwordconfirm"]','.register-form input[name="password"]')
+            ],
+            onSubmit : function (data) {
+                console.log(data)
+            }
+        })
+        Validator({
+            form:'.login-form',
+            formGroup:'.form-item',
+            rules : [
+                Validator.isRequired('input[name="email"]'),
+                Validator.isRequired('input[name="password"]','Vui lòng nhập mật khẩu'),
+                Validator.isLength('input[name="password"]',6),
+            ],
+            onSubmit : function (data) {
+                console.log(data)
+            }
+        })
+    },
+    handleEventClick : function () {
+        const _this =this;
+        loginBtn.onclick = function () {
+            if(!_this.isModal) {
+                modal.style.display = 'block';
+                _this.isModal = true;
+                if(!_this.isLoginForm)
+                {
+                    loginForm.style.display = 'block';
+                    _this.isLoginForm = true;
+                }
+            }
+        }
+        registerBtn.onclick = function () {
+            if(!_this.isModal)
+            {
+                modal.style.display = 'block';
+                _this.isModal = true;
+                if(!_this.isRegisterForm) {
+                    registerForm.style.display = 'block'
+                    _this.isRegisterForm = true;
+                }
+            }
+        }
+        modalOverlays.onclick = function () {
+            if(_this.isModal)
+            {
+                modal.style.display = 'none'
+                // disable login form 
+                loginForm.style.display = 'none';
+                _this.isLoginForm = false;    
+                // disable register form
+                registerForm.style.display = 'none'
+                _this.isRegisterForm = false;
+                _this.isModal = false;
+            }
+        }
+    },
+    start : function () {
+        this.handleEventClick();
+        this.useFunctionValidator();
+    }
+}
+form.start();

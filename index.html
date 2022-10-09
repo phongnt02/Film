@@ -30,6 +30,7 @@
                 <i class="fa-solid fa-envelope nav-right__icon"></i>
                 <i class="fa-solid fa-bell nav-right__icon"></i>
                 <div class="nav-right__login-btn">Login</div>
+                <div class="nav-right__login-btn nav-right__register-btn">Register</div>
             </div>
 
             <div class="nav-bar__menu">
@@ -332,6 +333,104 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal-overlays"></div>
+        <div class="modal-body">
+            <!-- Login layout -->
+            <form action="#" method="post" class="login-form">
+                <div class="form-heading">
+                    <h3 class="heading-text">Đăng nhập</h3>
+                </div>
+                <div class="form-content">
+                    <div class="form-item">
+                        <input type="text" class="form-input" placeholder="Nhập số điện thoại hoặc email" name="email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" class="form-input" placeholder="Mật khẩu" name="password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="form-submit">Đăng Nhập</button>
+                    </div>
+                </div>
+                <div class="form-forgot">
+                    <a href="#" class="form-forgot-link">Quên mật khẩu?</a>
+                </div>
+                <div class="form-login-with">
+                    <div class="form-login-with__qr">
+                        <div class="form-login-with__qr-icon">
+                            <img src="./img/qrcode.png" alt="qr-code">
+                        </div>
+                        <span class="login-with__qr-text">Đăng nhập nhanh với mã QR</span>                    
+                    </div>
+                    <p class="form-login-with__text">Hoặc Tiếp tục với</p>
+                    <div class="form-login-with__social-network">
+                        <div class="form-login-with__facebook">
+                            <i class="form-login-with__icon fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="form-login-with__google">
+                            <i class="form-login-with__icon fa-brands fa-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-login-other">
+                    <p class="form-login-other__content">Chưa có tài khoản? <a href="#" class="form-login-other__link">Đăng ký</a></p>
+                </div>
+            </form>
+            <!-- Register layout -->
+            <form action="#" method="post" class="register-form">
+                <div class="form-heading">
+                    <h3 class="heading-text">Đăng ký</h3>
+                </div>
+                <div class="form-content">
+                    <div class="form-item">
+                        <input type="text" class="form-input" placeholder="Họ và tên" name="fullname">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" class="form-input" placeholder="Nhập số điện thoại hoặc email" name="email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" class="form-input" placeholder="Mật khẩu" name="password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <input type="password" class="form-input" placeholder="Xác nhận mật khẩu" name="passwordconfirm">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-item">
+                        <button type="submit" class="form-submit">Đăng Ký</button>
+                    </div>
+                </div>
+                <div class="form-rules">
+                    <p href="#" class="form-rules-text">Bằng cách chọn "Đăng ký tài khoản", bạn đồng ý với các <a href="#" class="form-rules-link">Điều khoản sử dụng</a></p>
+                </div>
+                <div class="form-login-with">
+                    <div class="form-login-with__qr">
+                        <div class="form-login-with__qr-icon">
+                            <img src="./img/qrcode.png" alt="qr-code">
+                        </div>
+                        <span class="login-with__qr-text">Đăng nhập nhanh với mã QR</span>                    
+                    </div>
+                    <p class="form-login-with__text">Hoặc Tiếp tục với</p>
+                    <div class="form-login-with__social-network">
+                        <div class="form-login-with__facebook">
+                            <i class="form-login-with__icon fa-brands fa-facebook"></i>
+                        </div>
+                        <div class="form-login-with__google">
+                            <i class="form-login-with__icon fa-brands fa-google"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-login-other">
+                    <p class="form-login-other__content">Đã tài khoản? <a href="#" class="form-login-other__link">Đăng nhập</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/validator.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>
