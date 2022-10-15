@@ -419,6 +419,36 @@ body {
 .film-list__item-playbtn i {
     font-size: 40px;
 }
+
+/* Slider Slick Film List */
+.slider-film {
+    background-color: var(--box-background);
+    padding: 18px 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.slider-film-item {
+    margin: 0 8px;
+    text-decoration: none;
+}
+.slider-film-item__img {
+    position: relative;
+}
+.slider-film-item:hover .film-list__item-playbtn {
+    display: inline-flex;
+}
+.slider-film-item img {
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+.slider-film-item__name {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 4px;
+}
 /* slide bar */
 /* .slide-bar__selection {
     margin-left: 50px;
@@ -577,7 +607,6 @@ body {
     color: var(--white-color);
     font-size: 24px;
     padding: 14px 0;
-    margin: 0 0 20px 0;
 }
 .form-content {
     width: 100%;
@@ -624,15 +653,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 14px 0;
+    margin: 10px 0;
+}
+.form-login-with__qr img{
+    width: 50px;
 }
 .login-with__qr-text {
     margin-left: 12px;
     font-weight: 600;
     font-size: 18px;
-}
-.form-login-with__qr img{
-    width: 50px;
 }
 .form-login-with__text {
     text-align: center;
@@ -660,12 +689,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 14px 0;
 }
 .form-login-with__google, .form-login-with__facebook {
     margin: 0 20px;
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     background-color: var(--white-color);
     border-radius: 50%;
 }
@@ -674,9 +703,9 @@ body {
 }
 .form-login-with__icon  {
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     height: 100%;
-    line-height: 64px;
+    line-height: 50px;
     width: 100%;
 }
 .form-login-other {
@@ -705,4 +734,34 @@ body {
     font-size: 16px;
     font-weight: 500;
     padding-left: 14px;
+}
+/* Back to top */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2%;
+    right: 3%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: rgba(71, 60, 171, 0.6470588235);
+    animation: fadeIn 0.3s linear;
+}
+.back-to-top:hover {
+    cursor: pointer;
+    background-color: rgba(71, 60, 171, 0.4);
+}
+.back-to-top i {
+    font-size: 12px;
 }

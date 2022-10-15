@@ -1,16 +1,16 @@
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
+const $$ = document.querySelector.bind(document)
+const $$$ = document.querySelectorAll.bind(document)
 
 // Slider DOM Element
-const sliderBackground = $('.slider-background img')
-const sliderInfoHeading = $('.slider-background__info-heading')
-const sliderNameEnlish = $('.slider-background__info-name')
-const sliderProgress = $('.slider-background__info-box-progress')
-const sliderQualify = $('.slider-background__info-box-qualify')
-const sliderYear = $('.slider-background__info-box-year')
-const sliderNation = $('.slider-background__info-box-nation')
-const sliderPagination = $('.slider-pagination')
-let sliderPaginationPresentation = $('.slider-pagination__presentation')
+const sliderBackground = $$('.slider-background img')
+const sliderInfoHeading = $$('.slider-background__info-heading')
+const sliderNameEnlish = $$('.slider-background__info-name')
+const sliderProgress = $$('.slider-background__info-box-progress')
+const sliderQualify = $$('.slider-background__info-box-qualify')
+const sliderYear = $$('.slider-background__info-box-year')
+const sliderNation = $$('.slider-background__info-box-nation')
+const sliderPagination = $$('.slider-pagination')
+let sliderPaginationPresentation = $$('.slider-pagination__presentation')
 
 const slideShow = {
     currentIndex : 0,
@@ -96,7 +96,7 @@ const slideShow = {
             sliderPagination.innerHTML = html
         }
         // ghi đè lại DOM Element
-        sliderPaginationPresentation = $$('.slider-pagination__presentation')
+        sliderPaginationPresentation = $$$('.slider-pagination__presentation')
         
     },
     renderSelectionActive : function () {
@@ -134,11 +134,11 @@ slideShow.start()
 
 
 // Menu navbar DOM Element
-const moreBtn = $('.nav-left__icon')
-const navbarMenu = $('.nav-bar__menu')
-var navbarMenuItems = $$('.nav-bar__menu-item')
-var navbarSubMenu = $$('.nav-bar__subMenu')
-const navbarMenulist = $('.nav-bar__menu-list')
+const moreBtn = $$('.nav-left__icon')
+const navbarMenu = $$('.nav-bar__menu')
+var navbarMenuItems = $$$('.nav-bar__menu-item')
+var navbarSubMenu = $$$('.nav-bar__subMenu')
+const navbarMenulist = $$('.nav-bar__menu-list')
 
 const menuShow = {
     isMenu : false,
@@ -193,8 +193,8 @@ const menuShow = {
         })
         navbarMenulist.innerHTML = htmls.join('');
         // ghi đè lại DOM để có thể nạp các DOM vừa mới
-        navbarMenuItems = $$('.nav-bar__menu-item')
-        navbarSubMenu = $$('.nav-bar__subMenu')
+        navbarMenuItems = $$$('.nav-bar__menu-item')
+        navbarSubMenu = $$$('.nav-bar__subMenu')
     },
     handleEvent :function () {
         const _this = this
@@ -251,12 +251,12 @@ menuShow.start();
 
 
 // Login / Register Btn DOM Element
-const loginBtn = $('.nav-right__login-btn')
-const registerBtn = $('.nav-right__register-btn')
-const modal = $('.modal')
-const modalOverlays = $('.modal-overlays')
-const loginForm = $('.login-form')
-const registerForm = $('.register-form')
+const loginBtn = $$('.nav-right__login-btn')
+const registerBtn = $$('.nav-right__register-btn')
+const modal = $$('.modal')
+const modalOverlays = $$('.modal-overlays')
+const loginForm = $$('.login-form')
+const registerForm = $$('.register-form')
 
 const form = {
     isLoginForm : false,
@@ -335,3 +335,114 @@ const form = {
     }
 }
 form.start();
+
+// Back to top page
+const backToTopBtn = $$('.back-to-top')
+const backToTop = {
+    start : function () {
+        // handle show/hide backtotopBtn
+        document.onscroll = function () {
+            if(window.scrollY >= 200 || document.documentElement.scrollTop >= 200)
+            {
+                backToTopBtn.style.display = 'block';
+            }
+            else {
+                backToTopBtn.style.display = '';
+            }
+        }
+        
+        // event click backtotopBtn
+        backToTopBtn.onclick = function () {
+            console.log('h0')
+            window.scroll({
+                top :0,
+                behavior:"smooth"
+            });
+        }
+    }
+}
+
+backToTop.start();
+
+// render Film 
+const FilmItem = $$('.slider-film-list')
+
+const ListCarousel = {
+    handleSlickSlider : function () {
+        $(document).ready(function(){
+            $('.slider-film-list').slick({
+                arrows:false,
+                infinite:true,
+                slidesToShow: 5,
+                slidesToScroll:3,
+                autoplay:true,
+                autoplaySpeed:1000,	
+              });
+        });
+    },
+    renderHtml : function (dataFilm) {
+        var html = dataFilm.map(function(index){
+            return `
+            <a href="#" class="slider-film-item">
+                <div class="slider-film-item__img">
+                    <img src="${index.pathUrlImg}" alt="img-film">
+                    <div class="film-list__item-playbtn">
+                        <i class="fa-solid fa-circle-play"></i>
+                    </div>
+                </div>
+                <div class="slider-film-item__name">
+                    <p class="slider-film-item__name-flim">${index.name}</p>
+                </div>
+            </a>
+            `
+        })
+        FilmItem.innerHTML = html.join('')
+    },
+    start : function (dataFilm) {
+        this.renderHtml(dataFilm)
+        this.handleSlickSlider();
+    }
+}
+const dataFilm = [
+    {
+        name:'Bảy viên ngọc rồng',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fbay-vien-ngoc-rong-hanh-tinh-hac-am-thumb.jpg&w=192&q=75',
+        progress:'Hoàn tất'
+    },
+    {
+        name:'Sứ giả thần chết',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fsu-gia-than-chet-thumb.jpg&w=192&q=75',
+        progress:'Tập 33'
+    },
+    {
+        name:'LoveLive! Siêu sao',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Flove-live-sieu-sao-thumb.jpg&w=192&q=75',
+        progress:'Tập 1'
+    },
+    {
+        name:'Sơn Hải Tuyệt Luân',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fson-hai-tuyet-luan-thumb.jpg&w=192&q=75',
+        progress:'Tập 10'
+    },
+    {
+        name:'Cậu đúng là 1 thiên tài',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fcau-dung-la-mot-thien-tai-thumb.jpg&w=192&q=75',
+        progress:'Tập 36'
+    },
+    {
+        name:'Khế ước linh hồn',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fkhe-uoc-linh-hon-2-thumb.jpg&w=192&q=75',
+        progress:'Tập 11'
+    },
+    {
+        name:'Ma pháp thiếu nữ',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fmagia-record-ma-phap-thieu-nu-madoka-magica-ngoai-truyen-phan-2-thumb.jpg&w=192&q=75',
+        progress:'Tập 12'
+    },
+    {
+        name:'Ái Tình Flop',
+        pathUrlImg:'https://ophim.cc/_next/image?url=https%3A%2F%2Fimg.ophim.cc%2Fuploads%2Fmovies%2Fai-tinh-flops-thumb.jpg&w=192&q=75',
+        progress:'Tập 1'
+    },
+]
+ListCarousel.start(dataFilm);
